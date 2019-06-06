@@ -1,1 +1,22 @@
 // Mixins in here
+
+//Button
+.btn-style() {
+    width: 15rem;
+    font-size: 1.5rem;
+    background-color: teal;
+    color: white;
+    padding-top: 1rem;
+    padding-left: 3.5rem;
+    padding-right: 3rem;
+    padding-bottom: 1rem;
+    border-radius: 12px;
+    }
+
+//Layout
+.custom-layout(@f: column, @j: center, @a: center) {
+    display: flex;
+    flex-direction: @f;
+	justify-content: @j;
+    align-items: @a;
+}

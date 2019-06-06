@@ -1,5 +1,45 @@
 .home {
 
+  // @media @mobile {
+  //   .custom-layout();
+  //   width: 100%;
+  // }
+
+  header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin-top: 4rem;
+    margin-bottom: 3rem;
+   
+    h1 {
+      margin-bottom: 2.5rem;
+    }
+    
+    nav a {
+      @media @mobile {
+       .nav-mobile();
+      }
+
+      justify-content: space-evenly;
+      align-items: flex-end;
+      font-size: 1.5rem;
+      color: black;
+      padding: 1.5rem;
+      border: 2px solid red;
+    }
+
+    .funBus {
+      border-top: 2px dashed lightgray;
+    }
+
+    .welcome {
+      margin-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 2px dashed lightgray;
+    }
+  }
+
   .content-section {
     margin: 30px 0;
     display: flex;
@@ -7,7 +47,6 @@
     justify-content: space-between;
 
    
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
@@ -56,6 +95,11 @@
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
+   
+      .btn {
+       .btn-style();
+      }  
+    }  
   }
-}// home
+}
+// home
