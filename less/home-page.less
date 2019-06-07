@@ -1,4 +1,85 @@
 .home {
+  
+  @media @mobile {
+    .custom-layout();
+    width: 450px;
+  }
+
+  .container-header {
+    width: 800px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2rem;
+    
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+    } 
+
+    h1 {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  header {
+    @media @mobile {
+      display: flex;
+      flex-direction: row;
+      width: 450px;
+    }
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: center;
+
+    h1 {
+      @media @mobile {
+        margin-bottom: 1.5rem;
+      }
+
+      margin-bottom: 2.5rem;
+    }
+   
+    nav {
+      width: 50%;
+      height: 3rem;
+      margin-top: 1rem;
+      justify-content: center;
+      align-content: flex-end;
+
+      @media @mobile {
+        margin-left: 6.5rem;
+        width: 100%;
+      }
+    }
+    
+    nav a {
+      @media @mobile {
+       width: 100%;
+      }
+
+      font-size: 1.5rem;
+      color: black;
+      margin: auto;
+      padding-right: 1.6rem;
+      padding-left: 1.6rem;
+    }
+
+    .funBus {
+      border-top: 2px dashed silver;
+    }
+
+    .welcome {
+      margin-top: 2.5rem;
+      padding-bottom: 2.5rem;
+      border-bottom: 2px dashed silver;
+    }
+  }
 
   .content-section {
     margin: 30px 0;
@@ -6,19 +87,34 @@
     flex-wrap: wrap;
     justify-content: space-between;
 
+    @media @mobile {
+      flex-direction: column;
+    }
+
    
-    
     .text-content {
       width: 48%;
       padding-right: 1%;
+
+      @media @mobile {
+        width: 100%;
+      }
     }
 
     .img-content {
       width: 48%;
       padding-left: 1%;
 
+      @media @mobile {
+        width: 450px;
+      }
+
       img {
         border-radius: 10px;
+
+        @media @mobile {
+          width: 450px;
+        }
       }
     }
   }
@@ -27,6 +123,10 @@
     padding-bottom: 30px;
     border-bottom: 2px dashed @navigation-border;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column-reverse;
+    }
     .text-content {
       padding-left: 1%;
       padding-right: 0;
@@ -42,6 +142,10 @@
     width: 75%;
     margin: 0 auto 30px;
 
+    @media @mobile {
+      width: 100%;
+    }
+
     img {
       border-radius: 10px;
     }
@@ -53,9 +157,38 @@
     display: flex;
     justify-content: space-between;
 
+    @media @mobile {
+      display: flex;
+      flex-direction: column;
+    }
+
     .destination {
       width: 30%;
       margin-bottom: 30px;
-    }
+
+      @media @mobile {
+         width: 80%;
+         margin-left: auto;
+         margin-right: auto;
+      }
+   
+      .btn {
+        width: 15rem;
+        font-size: 1.5rem;
+        background-color: @button-bg;
+        color: white;
+        padding-top: 1rem;
+        padding-left: 3.5rem;
+        padding-right: 3rem;
+        padding-bottom: 1rem;
+        border-radius: 12px;
+        
+        @media @mobile {
+          .btn-dimensions(100%, 2rem, 13.5rem);
+      
+        }
+      }  
+    }  
   }
-}// home
+}
+// home
