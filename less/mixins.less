@@ -4,7 +4,7 @@
 .btn-style() {
     width: 15rem;
     font-size: 1.5rem;
-    background-color: teal;
+    background-color: @button-bg;
     color: white;
     padding-top: 1rem;
     padding-left: 3.5rem;
@@ -12,6 +12,14 @@
     padding-bottom: 1rem;
     border-radius: 12px;
     }
+
+.btn-dimensions(@width, @topPadding, @leftPadding) {
+    width: @width;
+    padding-top: @topPadding;
+    padding-bottom: @topPadding;
+    padding-left: @leftPadding;
+    padding-right: @leftPadding;
+}
 
 //Layout
 .custom-layout(@f: column, @j: center, @a: center) {
